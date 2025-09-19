@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+
+
+header nav,
+ul {
+    display: flex;
+    list-style: none;
+    gap: 5rem;
+    align-items: center;
+    font-weight: bold;
+}
+
+header {
+    box-shadow: #000 2px 4px 16px;
+    padding-block: 1rem;
+}
+
+header nav {
+    justify-content: space-between;
+    padding-inline: 2rem;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+button {
+    font-weight: 700;
+    border: none !important;
+    background-color: navy;
+    color: #fff;
+    padding: 0.3em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+main {
+    margin-top: 5rem;
+    padding-inline: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+label {
+    padding-right: 2rem;
+}
+
+h2 {
+    padding-block: 4rem;
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    margin-top: 4rem;
+    border: 1px dotted black;
+}
+
+table * {
+    border-collapse: collapse;
+    text-align: left;
+    border: 1px dotted black;
+    padding: 3px 8px;
+}
