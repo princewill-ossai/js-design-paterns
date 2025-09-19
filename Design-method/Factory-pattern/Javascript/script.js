@@ -4,14 +4,7 @@ function createCustomer(fname, lname, email, pnum, city) {
     lname,
     email,
     pnum,
-    city,
-    customerInfo() {
-      console.log(`First Name: ${this.fname}
-Last Name: ${this.lname}
-Email: ${this.email}
-Phone Number: ${this.pnum}
-City: ${this.city}`);
-    }
+    city
   };
 }
 
@@ -27,11 +20,9 @@ if (btn) {
     const city = document.getElementById("city").value;
 
     const customer = createCustomer(fname, lname, email, pnum, city);
-    customer.customerInfo();
 
     let customers = JSON.parse(localStorage.getItem("customers")) || [];
     const customerToSave = { ...customer };
-    delete customerToSave.customerInfo;
     customers.push(customerToSave);
     localStorage.setItem("customers", JSON.stringify(customers));
   });
@@ -41,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const tableData = document.getElementById("table-body");
   if (tableData) {
     const customers = JSON.parse(localStorage.getItem("customers")) || [];
-    customers.forEach(function (customer) {
+    customers.forEach((customer) => {
       tableData.innerHTML += `
         <tr>
              <td>${customer.fname}</td>
