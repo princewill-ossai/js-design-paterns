@@ -21,6 +21,10 @@ ul {
     font-weight: bold;
 }
 
+li {
+    cursor: pointer;
+}
+
 header {
     box-shadow: #000 2px 4px 16px;
     padding-block: 1rem;

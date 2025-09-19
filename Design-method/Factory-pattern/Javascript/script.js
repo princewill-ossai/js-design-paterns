@@ -1,4 +1,4 @@
-function createCustomer(fname, lname, email, pnum, city) {
+function createCustomer(fname, lname, email, pnum, city, type) {
   return {
     fname,
     lname,
@@ -6,6 +6,25 @@ function createCustomer(fname, lname, email, pnum, city) {
     pnum,
     city
   };
+}
+
+function createRegularCustomer(fname, lname, email, pnum, city) {
+  return new Customer(fname, lname, email, pnum, city, "regular");
+}
+
+function createSeniorCustomer(fname, lname, email, pnum, city) {
+  return new Customer(fname, lname, email, pnum, city, "senior");
+}
+
+class Customer {
+  constructor(fname, lname, email, pnum, city, type) {
+    this.fname = fname;
+    this.lname = lname;
+    this.email = email;
+    this.pnum = pnum;
+    this.city = city;
+    this.type = type;
+  }
 }
 
 const btn = document.getElementById("btn");
