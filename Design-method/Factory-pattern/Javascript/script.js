@@ -4,7 +4,8 @@ function createCustomer(fname, lname, email, pnum, city, type) {
     lname,
     email,
     pnum,
-    city
+    city,
+    type
   };
 }
 
@@ -36,9 +37,10 @@ if (btn) {
     const lname = document.getElementById("lname").value;
     const email = document.getElementById("email").value;
     const pnum = document.getElementById("pnum").value;
-    const city = document.getElementById("city").value;
+    const city = document.getElementById("city").value
+    const type = document.getElementById("type").value;
 
-    const customer = createCustomer(fname, lname, email, pnum, city);
+    const customer = createCustomer(fname, lname, email, pnum, city, type);
 
     let customers = JSON.parse(localStorage.getItem("customers")) || [];
     const customerToSave = { ...customer };
@@ -59,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
              <td>${customer.email}</td>
              <td>${customer.pnum}</td>
              <td>${customer.city}</td>
+             <td>${customer.type}</td>
         </tr>
       `;
     });
